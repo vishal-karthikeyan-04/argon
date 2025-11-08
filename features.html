@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argon Features - Next-Gen Image Compression</title>
+
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* PAGE HEADER */
+.section-header {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.section-header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #222;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+/* FEATURES GRID */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    padding: 40px 30px 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.feature-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2.2;
+}
+
+.feature-card h3 {
+    color: #007bff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Argon</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="why argon.html">Why Argon</a>
+        <a href="features.html">Features</a>
+        <a href="buy.html">Buy</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="section-header">
+    <h1>Powerful Features</h1>
+    <p>Argon combines next-generation compression algorithms with speed, precision, and full offline security.</p>
+</section>
+
+<!-- FEATURES GRID -->
+<section class="features-grid">
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="database"></i></div>
+        <h3>High Savings</h3>
+        <p>Argon achieves up to 80% size reduction without visible quality loss. Its adaptive compression engine identifies redundant data and minimizes it intelligently, resulting in smaller files with zero compromise.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="layers"></i></div>
+        <h3>Lossless and Visual Lossless Modes</h3>
+        <p>Choose between true lossless mode for perfect fidelity or visual lossless mode for even higher compression. Argon intelligently analyzes human visual sensitivity to deliver indistinguishable quality at smaller file sizes.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="function-square"></i></div>
+        <h3>True Mathematical Visual Lossless</h3>
+        <p>Argon’s visual mode isn’t just perceptual — it’s mathematically optimized to ensure any differences remain below human-detectable thresholds. This precision gives unmatched clarity with ultra-small files.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="zap"></i></div>
+        <h3>Fast</h3>
+        <p>Powered by multi-threaded optimization and advanced SIMD acceleration, Argon compresses hundreds of images in seconds. No waiting, no lag — just instant results at lightning speed.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="monitor"></i></div>
+        <h3>Supports All Platforms</h3>
+        <p>Argon runs flawlessly across Windows, macOS, and Linux. Its optimized binaries ensure consistent performance and reliability regardless of platform or device architecture.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="image"></i></div>
+        <h3>Direct .argon Viewing Support</h3>
+        <p>Preview your compressed images instantly without extraction. Argon includes a built-in renderer that displays .argon files directly for quick review and side-by-side comparison.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="file-image"></i></div>
+        <h3>Built-in Thumbnails</h3>
+        <p>Each compressed image stores an embedded thumbnail, allowing instant previews in file explorers and image browsers without needing to fully decode the file.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="shield"></i></div>
+        <h3>Fully Secure and Private</h3>
+        <p>Argon operates entirely offline — no uploads, no cloud dependencies. Every image stays within your system, ensuring total privacy, data security, and full control over your content.</p>
+    </div>
+
+</section>
+
+<!-- Initialize Lucide Icons -->
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+</html>
