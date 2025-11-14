@@ -11,8 +11,8 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "vishallegionpro@gmail.com",  // your Gmail
-      pass: "jydxgansunnrvazx"           // Gmail App Password
+      user: process.env.GMAIL_USER,  // your Gmail
+      pass: process.env.GMAIL_PASS           // Gmail App Password
     }
   });
 
@@ -32,3 +32,4 @@ export default async function handler(req, res) {
     res.status(500).json({ status: "error", message: "Failed to send email." });
   }
 }
+
