@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argon Pricing - Buy Now</title>
+<link rel="icon" type="image/png" href="icon.png">
+
+<!-- Razorpay Checkout Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* PRICING SECTION */
+.pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.pricing-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.pricing-section h2 span {
+    color: #007bff;
+}
+
+.pricing-subtitle {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #666;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* PLAN CARDS */
+.plan-card {
+    background: #fff;
+    width: 310px;
+    border-radius: 14px;
+    padding: 35px;
+    border: 1px solid #e3e3e3;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.plan-card.best {
+    border: 2px solid #007bff;
+    box-shadow: 0 8px 40px rgba(0, 123, 255, 0.3);
+}
+
+.badge {
+    background: #007bff;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.plan-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #007bff;
+}
+
+.price small {
+    font-size: 18px;
+    color: #444;
+}
+
+.plan-features {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.plan-features li::before {
+    content: "✔";
+    color: #007bff;
+    margin-right: 8px;
+}
+
+/* BUTTONS */
+.btn {
+    margin-top: 25px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #005ec2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* POPUP */
+#popup {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-box {
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    width:350px;
+}
+
+.popup-box h3 {
+    margin-top:0;
+}
+
+.popup-box input {
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Argon</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="why argon.html">Why Argon</a>
+        <a href="features.html">Features</a>
+        <a href="buy.html">Buy</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- PRICING SECTION -->
+<section class="pricing-section">
+    <h2>Simple, <span>Transparent Pricing</span></h2>
+    <p class="pricing-subtitle">Choose the plan that fits your needs.</p>
+
+    <div class="pricing-container">
+
+        <!-- Personal -->
+        <div class="plan-card">
+            <h3>Personal</h3>
+            <div class="price">₹749 <small>/ one-time</small></div>
+
+            <ul class="plan-features">
+                <li>Unlimited image compression</li>
+                <li>Lossless & visual lossless modes</li>
+                <li>Up to 80% compression ratio</li>
+                <li>Offline operation</li>
+                <li>Single device license</li>
+                <li>Free updates for 1 year</li>
+                <li>Email support</li>
+            </ul>
+
+            <button class="btn" onclick="payNow('Personal', 749)">Get Started</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="plan-card best">
+            <span class="badge">BEST VALUE</span>
+            <h3>Premium</h3>
+            <div class="price">₹1599 <small>/ one-time</small></div>
+
+            <ul class="plan-features">
+                <li>Everything in Personal, plus:</li>
+                <li>Up to 3 device licenses</li>
+                <li>Priority email support</li>
+                <li>Advanced batch processing</li>
+                <li>Custom compression profiles</li>
+                <li>Lifetime updates</li>
+                <li>Commercial use license</li>
+                <li>API access</li>
+            </ul>
+
+            <button class="btn" onclick="payNow('Premium', 1599)">Get Started</button>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="plan-card">
+            <h3>Enterprise</h3>
+            <div class="price">Custom <small>/ contact us</small></div>
+
+            <ul class="plan-features">
+                <li>Everything in Premium, plus:</li>
+                <li>Unlimited device licenses</li>
+                <li>Dedicated support team</li>
+                <li>Custom integration support</li>
+                <li>On-premise deployment</li>
+                <li>SLA guarantee</li>
+                <li>Training & onboarding</li>
+                <li>Volume license discounts</li>
+            </ul>
+
+            <a href="about.html#contact" class="btn">Contact Sales</a>
+        </div>
+    </div>
+</section>
+
+<!-- POPUP FORM -->
+<div id="popup">
+    <div class="popup-box">
+        <h3>Enter Details</h3>
+
+        <label>Name</label>
+        <input id="userName" type="text">
+
+        <label>Email</label>
+        <input id="userEmail" type="email">
+
+        <label>Contact</label>
+        <input id="userPhone" type="text">
+
+        <button class="btn" onclick="startPayment()">Continue to Payment</button>
+    </div>
+</div>
+
+<!-- PAYMENT SCRIPT -->
+<script>
+let selectedPlan = "";
+let selectedAmount = 0;
+
+// Open popup
+function payNow(plan, amount) {
+    selectedPlan = plan;
+    selectedAmount = amount;
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+// Close popup on outside click
+window.onclick = function(event) {
+    const popup = document.getElementById("popup");
+    const box = document.querySelector(".popup-box");
+
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+};
+
+// Start payment
+function startPayment() {
+    let name = document.getElementById("userName").value.trim();
+    let email = document.getElementById("userEmail").value.trim();
+    let phone = document.getElementById("userPhone").value.trim();
+    
+
+    if (!name || !email || !phone) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    document.getElementById("popup").style.display = "none";
+
+    var options = {
+        key: "rzp_live_RdekzPbL9fDhjC",
+        amount: selectedAmount * 100,
+        currency: "INR",
+        name: "Argon Compression",
+        description: selectedPlan + " Plan Purchase",
+        image: "https://argoncompression.com/icon.png",
+
+        handler: function (response) {
+            window.location.href = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID";
+        },
+
+        prefill: {
+            name: name,
+            email: email,
+            contact: phone
+        },
+
+        theme: { color: "#007bff" }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+}
+</script>
+
+
+</body>
+</html>

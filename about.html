@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Argon - Our Story & Vision</title>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #007bff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* allow wrapping if screen is small */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Responsive navbar for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* HEADER SECTION */
+.about-header {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.about-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #222;
+}
+
+.about-header p {
+    font-size: 17px;
+    color: #666;
+    margin-top: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* INFO GRID */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.about-card {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.about-icon {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.about-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke-width: 2.2;
+}
+
+.about-card h3 {
+    color: #007bff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 15.5px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* FOOTER TAGLINE */
+.about-footer {
+    background: #f9fbff;
+    text-align: center;
+    padding: 80px 20px;
+    color: #333;
+}
+
+.about-footer h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.about-footer p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: #ffffff;
+}
+
+.contact-section h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 25px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.15);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 140px;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #005ec2;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Argon</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="why argon.html">Why Argon</a>
+        <a href="features.html">Features</a>
+        <a href="buy.html">Buy</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- ABOUT HEADER -->
+<section class="about-header">
+    <h1>About Argon</h1>
+    <p>Argon was created with a simple goal — to redefine image compression without sacrificing quality. 
+    Our mission is to deliver ultra-efficient, visually perfect results with complete data privacy. 
+    From individual creators to global enterprises, Argon empowers everyone to save space, speed up workflows, and stay fully offline.</p>
+</section>
+
+<!-- INFO GRID -->
+<section class="about-grid">
+
+    <div class="about-card">
+        <div class="about-icon"><i data-lucide="users"></i></div>
+        <h3>Who We Are</h3>
+        <p>We are a team of passionate engineers and designers focused on digital efficiency. 
+        Our background in image processing, machine learning, and visual optimization drives Argon’s world-class performance and reliability.</p>
+    </div>
+
+    <div class="about-card">
+        <div class="about-icon"><i data-lucide="target"></i></div>
+        <h3>Our Mission</h3>
+        <p>To make advanced compression accessible, fast, and secure — for everyone. 
+        We believe technology should be simple, efficient, and private. Argon embodies that principle through cutting-edge offline compression.</p>
+    </div>
+
+    <div class="about-card">
+        <div class="about-icon"><i data-lucide="cpu"></i></div>
+        <h3>The Technology</h3>
+        <p>Built with modern codecs, adaptive entropy modeling, and hardware acceleration, 
+        Argon outperforms traditional tools like PNG, WebP, and 7-Zip while maintaining perfect image fidelity and speed.</p>
+    </div>
+
+</section>
+
+<!-- FOOTER TAGLINE -->
+<section class="about-footer">
+    <h2>“Compression Reimagined.”</h2>
+    <p>Argon continues to evolve — blending mathematical precision, blazing speed, and privacy-first design to power the next era of image compression.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? We'd love to hear from you. Send us a message below and our team will get back to you soon.</p>
+
+    <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Initialize Lucide Icons -->
+<script>
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const res = await fetch("/api/send", {    // point to Vercel serverless function
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await res.json();
+    alert(data.message);
+
+    if (data.status === "success") form.reset();
+  } catch (err) {
+    console.error(err);
+    alert("Failed to send message.");
+  }
+});
+</script>
+
+</body>
+</html>
