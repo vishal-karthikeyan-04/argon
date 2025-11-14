@@ -17,8 +17,8 @@ export default async function handler(req, res) {
   });
 
   const mailOptions = {
-    from: "vishallegionpro@gmail.com",   // must match transporter.user
-    to: "vishallegionpro@gmail.com",     // your email to receive
+    from: process.env.GMAIL_USER,   // must match transporter.user
+    to: process.env.GMAIL_USER,     // your email to receive
     replyTo: email,                       // user's email (optional)
     subject: `Contact Form Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
@@ -32,4 +32,5 @@ export default async function handler(req, res) {
     res.status(500).json({ status: "error", message: "Failed to send email." });
   }
 }
+
 
